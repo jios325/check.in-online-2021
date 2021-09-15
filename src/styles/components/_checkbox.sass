@@ -1,0 +1,56 @@
+.checkbox
+    position: relative
+    display: inline-block
+    position: relative
+    padding-left: 25px
+    margin-bottom: 10px
+    cursor: pointer
+    color: rgba(0,0,0,0.65)
+    letter-spacing: 0
+    line-height: 22px
+    font-size: em(14)
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    &:hover input[type="checkbox"]:not(:checked) ~ .checkbox__marker
+        background-color: $secondaryColor
+        opacity: 0.5
+        &:after
+            display: block
+        // opacity: 0.5
+        
+
+
+    & > input[type="checkbox"]
+        opacity: 0
+        visibility: hidden
+        width: 16px
+        height: 16px
+        &:checked  ~ .checkbox__marker
+            background-color: $secondaryColor
+            &:after
+                display: block
+
+    &__marker
+        position: absolute
+        top: 3px
+        left: 0px
+        height: 16px
+        width: 16px
+        background-color: #ffffff
+        border-radius: 4px
+        border: 1px solid $secondaryColor
+        &:after
+            content: ""
+            position: absolute
+            display: none
+            left: 5px
+            top: 2px
+            width: 5px
+            height: 10px
+            border: solid #ffffff
+            border-width: 0 3px 3px 0
+            -webkit-transform: rotate(45deg)
+            -ms-transform: rotate(45deg)
+            transform: rotate(45deg);

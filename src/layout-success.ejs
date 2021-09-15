@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <%= require('html-loader!./partials/header.ejs') %>
+    <main class="main-container">
+      <div class="content">
+        <div class="container">
+          <div class="row center-md">
+            <div class="col-xs-12 col-md-8">
+              <div class="text-center mt-10 mt-60-md mb-10 ">
+                <span class="icon icon-checkmark-circle icon--xl secondary-color"></span>
+              </div>
+              <h2 class="title title--lg text-center mb-15 mb-20-md uppercase">PRECHECKIN REALIZADO CON ÉXITO</h2>
+              <p class="paragraph--important text-center mb-30 mt-15 mb-60-md">
+                El proceso de precheckin ha sido realizado con éxito. En breves te llegará un email confirmando el proceso con el código QR adjunto.
+              </p>
+            </div>
+            <div class="col-xs-12">
+                <h2 class="title title--lg text-center mb-10 mb-20-md uppercase">DESCUBRE LOS SERVICIOS DE OASIS, Y VIVE UNA EXPERIENCIA INOLVIDABLE. UP GRADES, DAY PASS, CENAS, SPA… Y MUCHO MÁS</h2>
+                <!-- DESCUBRE LOS SERVICIOS DE OASIS, Y VIVE UNA EXPERIENCIA INOLVIDABLE. UP GRADES, DAY PASS, CENAS, SPA… Y MUCHO MÁS -->
+              <div class="row center-xs">
+                <div class="col-xs-12">
+                    <div class="responsive-img"></div>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                  <button class="btn btn--primary btn--block mt-15 mb-30 mt-20-md">Descubrir Servicios</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fluid-container"><%= require('html-loader!./partials/footer.ejs') %></div>
+    </main>
+    
+  </body>
+</html>

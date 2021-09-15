@@ -1,0 +1,32 @@
+// Hacer importacion de reset, utils y globals acá
+// @import 'node_modules/include-media/dist/_include-media.scss'
+// $breakpoints: (xs: 320px, sm: 768px, md: 1024px, lg: 1200px)
+@import ./modules/_variables.sass
+
+@import ./modules/_utils.sass
+
+@import ./modules/_base.sass
+@import ./modules/_reset.sass
+//GRID
+@import "~flexboxgrid/dist/flexboxgrid.min.css";
+// Components
+@import "components/_buttons.sass";
+@import "components/_inputs.sass";
+@import "components/_checkbox.sass";
+@import "components/_texts.sass";
+@import "components/_modal.sass";
+@import "components/_alert.sass";
+@import "components/_separator.sass";
+@import "components/_add-field.sass";
+@import "components/_responsive-container.sass";
+// Layout
+@import "./layout/_header.sass";
+@import "./layout/_footer.sass";
+@import "./layout/_content.sass";
+@import "./icons/styles.css";
+@import "./icons/_sizes.sass";
+.modal
+    display: none
+
+.modal.is-open
+    display: block

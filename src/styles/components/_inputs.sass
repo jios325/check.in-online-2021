@@ -1,0 +1,107 @@
+input[type="text"], input[type="number"], input[type="date"]
+    font-size: em(16)
+    border: 0
+    font-family: inherit
+    -webkit-appearance: none
+    border-radius: 0
+    padding: 0
+    cursor: text
+    background-color: #ffffff
+    line-height: 52px
+    padding-left: 16px
+    border-radius: 4px
+
+    &:-internal-autofill-selected
+        background-color: #ffffff !important
+
+    &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus, &:-webkit-autofill:active
+        -webkit-box-shadow: 0 0 0 30px white inset !important
+
+    &:focus::-webkit-input-placeholder
+        opacity: 1
+
+        // font-size: em(12)
+
+    &:focus
+        outline: none
+        border-bottom: 0
+
+    //cuando esta el placeholder centro la etiqueta
+    // &:placeholder-shown + label
+    //     background: #ffffff
+    //     top: 50%
+    //     left: 15px
+    //     cursor: text
+    //     color: darken($gray, 30%)
+    //     font-size: em(16)
+
+    // &:not(:placeholder-shown), &:focus + label
+    //     top: 0
+    //     left: 5px
+    // &:focus + label
+    //     color: $secondaryColor
+    //     font-size: em(12)
+
+
+\::-webkit-input-placeholder
+    // opacity: 0
+    // transition: inherit
+    font-size: em(16)
+
+.field
+    display: flex
+    flex-flow: column-reverse
+    margin-bottom: 1em
+    border: 2px solid $secondaryColor
+    border-radius: 4px
+    position: relative
+    height: 56px
+    line-height: 56px
+
+    &__label
+        // text-transform: uppercase
+        letter-spacing: 0.05em
+        background: #ffffff
+        position: absolute
+        top: 0
+        left: 5px
+        transform: translateY(-50%)
+        font-size: em(12)
+        padding: 5px 7px
+        color: $secondaryColor
+        letter-spacing: 0.4px
+        line-height: 16px
+        // transition: all 0.2s
+        pointer-events: none
+        white-space: nowrap
+        text-overflow: ellipsis
+        overflow: hidden
+        +media('<=xs')
+            max-width: 94%
+
+input[type="file"]
+  color: transparent
+  position: absolute
+  z-index: -1
+  left: -999// just in case
+
+  &::-webkit-file-upload-button
+    visibility: hidden
+.upload__image
+    display: inline-block
+    box-sizing: border-box
+    height: 148px
+    width: 153px
+    border: 1px dashed #444444
+    border-radius: 5px
+    cursor: pointer
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 auto
+    color: $secondaryColor
+    &:hover
+        border-color: $secondaryColor
+
+//   &:active
+//     outline: 0

@@ -1,0 +1,238 @@
+// @import './vars.styl'
+@for $num from 1 through 20
+    .mb-#{$num * 5}
+        margin-bottom: ($num * 5px) !important
+
+        &-md
+            +media(">=md")
+                margin-bottom: ($num * 5px) !important
+
+    .mt-#{$num * 5}
+        margin-top: ($num * 5px) !important
+
+        &-md
+            +media(">=md")
+                margin-top: ($num * 5px) !important
+
+    .ml-#{$num * 5}
+        margin-left: ($num * 5px) !important
+
+        &-md
+            +media(">=md")
+                margin-left: ($num * 5px) !important
+
+    .mr-#{$num * 5}
+        margin-right: ($num * 5px) !important
+
+        &-md
+            +media(">=md")
+                margin-right: ($num * 5px) !important
+
+    .pb-#{$num * 5}
+        padding-bottom: ($num * 5px) !important
+
+        &-md
+            +media(">=md")
+                padding-bottom: ($num * 5px) !important
+
+    .pt-#{$num * 5}
+        padding-top: ($num * 5px) !important
+
+        &-md
+            +media(">=md")
+                padding-top: ($num * 5px) !important
+
+    .pl-#{$num * 5}
+        padding-left: ($num * 5px) !important
+
+        &-md
+            +media(">=md")
+                padding-left: ($num * 5px) !important
+
+.margin-auto
+    margin: 0 auto !important
+
+.no-padding
+    padding: 0 !important
+
+    &-md
+        +media(">=md")
+            padding: 0 !important
+
+.no-margin
+    margin:0!important
+
+    &-sm
+        // @include tablet()
+        +media(">=md")
+            margin:0!important
+
+    &-md
+        // @include desktop()
+        +media(">=lg")
+            margin:0!important
+
+.clearfix
+    &:after, &:before
+        content: ""
+        display: block
+        clear: both
+
+.center-block
+    display: block
+    margin: 0 auto
+
+.visible
+    &-xs, &-sm, &-md, &-lg
+        display: none !important
+
+    &-inline-xs, &-inline-sm, &-inline-md, &-inline-lg
+        display: none !important
+
+    &-flex-xs, &-flex-sm, &-flex-md, &-flex-lg
+        display: none !important
+
+    +media(">=xs", "<sm")
+        &-xs
+            display: block !important
+
+        &-inline-xs
+            display: inline-block !important
+
+        &-flex-xs
+            display: flex !important
+
+
+    +media(">=sm")
+        &-sm
+            display: block !important
+
+        &-inline-sm
+            display: inline-block !important
+
+        &-flex-sm
+            display: flex !important
+
+
+    +media(">=md")
+        &-md
+            display: block !important
+
+        &-inline-md
+            display: inline-block !important
+
+        &-flex-md
+            display: flex !important
+
+
+    +media(">=lg")
+        &-lg
+            display: block !important
+
+        &-inline-lg
+            display: inline-block !important
+
+        &-flex-lg
+            display: flex !important
+
+.hidden
+    display: none !important
+
+    +media(">=xs", "<sm")
+        &-xs
+            display: none !important
+
+
+    +media(">=sm")
+        &-sm
+            display: none !important
+
+
+    +media(">=md")
+        &-md
+            display: none !important
+
+
+    +media(">=lg")
+        &-lg
+            display: none !important
+
+// .no-pointer
+// 	cursor: auto!important
+//positions ----------------------------------------------
+.block-center
+    margin: 0 auto
+
+.pull-right
+    float: right !important
+
+.pull-left
+    float: left !important
+
+.uppercase
+    text-transform: uppercase
+
+.lowercase
+    text-transform: capitalize !important
+
+.text-left
+    text-align: left
+
+    &-md
+        +media(">=md")
+            text-align: left !important
+
+.text-right
+    text-align: right
+
+    &-md
+        +media(">=md")
+            text-align: right !important
+
+.text-center
+    text-align: center
+
+    &-md
+        +media(">=md")
+            text-align: center !important
+
+.bold
+    font-weight: bold
+
+.capitalize
+    text-transform: capitalize
+
+// ICONOS
+.icon
+    vertical-align: middle
+
+    &--md
+        font-size: 1.2em
+
+        &-sub:before
+            font-size: 1.2em
+
+    &--lg
+        font-size: 1.5em
+
+        &-sub:before
+            font-size: 1.5em
+
+    &--xl
+        font-size: 1.8em
+
+        &-sub:before
+            font-size: 1.8em
+
+    &--xll
+        font-size: 2em
+
+        &-sub:before
+            font-size: 2em
+
+.w-100
+    +media("<=sm")
+        width: 100px
+
+.secondary-color
+    color: $secondaryColor

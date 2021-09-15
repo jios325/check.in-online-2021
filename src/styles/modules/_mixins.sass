@@ -1,0 +1,18 @@
+@use "sass:math"
+
+$browser-context: 16
+
+@function em($pixels, $context: $browser-context)
+    @return #{$pixels / $browser-context}em
+
+=button($bg, $color, $borderColor)
+    background-color: $bg
+    color: $color
+    border: 1px solid $borderColor
+
+    &:hover
+        background-color: darken($bg, 8%)
+        transition: all 0.3s ease
+
+    &:active
+        background-color: darken($bg, 10%)

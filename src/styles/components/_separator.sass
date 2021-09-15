@@ -1,0 +1,24 @@
+.separator
+    border: 0px
+    border-bottom: 1px solid rgba(91, 91, 91, 0.4)
+    width: 100%
+
+    &--text
+        display: flex
+        justify-content: center
+        align-items: center
+
+        &:after, &:before
+            content: ""
+            display: block
+            width: 49%
+            border-bottom: 1px solid rgba(91, 91, 91, 0.4)
+
+        & > span
+            color: lighten($textColor, 35%)
+            padding: 0px em(16)
+            white-space: nowrap
+            font-size: 12px
+            letter-spacing: 0
+            line-height: 14px
+            text-align: center

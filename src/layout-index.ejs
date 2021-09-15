@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <%= require('html-loader!./partials/header.ejs') %>
+    <main class="main-container">
+      <div class="content">
+        <div class="container">
+          <div class="row center-md">
+            <div class="col-xs-12 col-md-8">
+              <div class="text-center mt-10 mt-60-md">
+                <img class="w-100" src="/logo.png" alt="" />
+              </div>
+              <h2 class="title text-center mb-10 mb-15-md mt-30 mt-40-md">Bienvenido a Oasis Hotels & Resorts</h2>
+              <p class="paragraph--important text-center">
+                En esta página podrás realizar el PRECHECKIN online para evitar filas a tu llegada al hotel. Únicamente necesitas tu número de reserva y tu pasaporte para hacer tu
+                precheckin.
+              </p>
+            </div>
+            <div class="col-xs-12">
+              <div class="row center-xs">
+                <div class="col-xs-12 col-md-3">
+                  <button class="btn btn--primary btn--block mt-15 mb-30 mt-40-md">COMENZAR PRECHECKIN</button>
+                </div>
+                <div class="col-xs-12 col-md-10">
+                  <img src="../src/images/bienvenida.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fluid-container"><%= require('html-loader!./partials/footer.ejs') %></div>
+    </main>
+  </body>
+</html>
