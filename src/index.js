@@ -37,20 +37,15 @@ $(".check-form").on("submit", function (event) {
   });
   if (isEmpty.length > 0) {
     event.stopImmediatePropagation();
-    // show Alert
     $(".alert--image").removeClass("hidden");
-    // add class to buttons
     isEmpty.each(function (item, obj) {
       const target = $(obj).data("btn");
       $('[data-target="' + target + '"]').addClass("alert--danger alert--danger__border");
     });
     setTimeout(function () {
       $(".alert--image").addClass("hidden");
-      // $( "input[name$='letter']" )
-      // $( "input[name*='man']" )
       $("button[data-target]").removeClass("alert--danger alert--danger__border");
     }, 5000);
-    // alert("You need to make the form valid");
     return false;
   }
 });
