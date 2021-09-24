@@ -13,9 +13,7 @@ if ($("#arrival-date").length > 0) {
     // startDate: new Date(),
   });
 }
-// Code upload Image
 $("body").on("change", ".upload__btn", function (event) {
-  console.log("works");
   event.stopPropagation();
   event.stopImmediatePropagation();
   loadFileAndPreview(event);
@@ -23,13 +21,9 @@ $("body").on("change", ".upload__btn", function (event) {
 
 // Incializamos Los modals
 MicroModal.init();
-// Mostramos los modals agregados dinamicamente
-$(".added__fields").on("click", ".show-modal", function () {
-  const $this = $(this);
-  MicroModal.show($this.data("target"));
-});
 
 // Only for validation front, this doesnt should affect another listeners
+// there is only one input field now, remove not used code
 $(".check-form").on("submit", function (event) {
   const $inputsFiles = $('input[type="file"]');
   const isEmpty = $inputsFiles.filter(function () {

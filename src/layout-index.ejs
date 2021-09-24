@@ -28,26 +28,49 @@
     <!-- End Google Tag Manager (noscript) -->
     <%= require('html-loader!./partials/header.ejs') %>
     <main class="main-container">
-      <div class="content">
-        <div class="container">
-          <div class="row center-md">
-            <div class="col-xs-12 col-md-8">
-              <div class="text-center mt-10 mt-60-md">
-                <img class="w-100" src="/logo.png" alt="" />
+      <div class="content--main">
+        <div class="content--main__left">
+          <div class="container--fluid">
+            <div class="row center-md">
+              <div class="col-xs-12 col-md-9">
+                <h2 class="title text-center mb-15 mb-15-md mt-35 mt-40-md">Bienvenido a Oasis Hotels & Resorts</h2>
+                <p class="paragraph--important text-center mb-50-md">
+                  En esta página podrás realizar el PRECHECKIN online para evitar filas a tu llegada al hotel. <br />
+                  <br />
+                  Únicamente necesitas tu número de reserva y tu pasaporte para hacer tu precheckin.
+                </p>
               </div>
-              <h2 class="title text-center mb-10 mb-15-md mt-30 mt-40-md">Bienvenido a Oasis Hotels & Resorts</h2>
-              <p class="paragraph--important text-center">
-                En esta página podrás realizar el PRECHECKIN online para evitar filas a tu llegada al hotel. Únicamente necesitas tu número de reserva y tu pasaporte para hacer tu
-                precheckin.
-              </p>
             </div>
-            <div class="col-xs-12">
-              <div class="row center-xs">
-                <div class="col-xs-12 col-md-3">
-                  <button class="btn btn--primary btn--block mt-15 mb-30 mt-40-md">COMENZAR PRECHECKIN</button>
+          </div>
+
+          <img class="mb-15" src="../src/images/bienvenida.png" alt="" />
+        </div>
+        <div class="content--main__right">
+          <div class="container--fluid">
+            <div class="row center-md">
+              <div class="col-xs-12 col-md-8">
+                <div class="text-center mt-10 mt-60-md">
+                  <img class="w-100" src="src/images/logo.png" alt="" />
                 </div>
-                <div class="col-xs-12 col-md-10">
-                  <img src="../src/images/bienvenida.png" alt="" />
+                <h2 class="title text-center mb-15 mb-20-md mt-20 mt-40-md">Seleccione su método de registro</h2>
+                <div class="row">
+                  <div class="col-xs-12 col-md-6">
+                    <a href="" class="btn btn--secondary btn--block mb-10">COMPROBANTE DE AGENCIA</a>
+                  </div>
+                  <div class="col-xs-12 col-md-6">
+                    <a href="" class="btn btn--secondary btn--block">ESCANEO DE PASAPORTE</a>
+                  </div>
+                </div>
+                <p class="paragraph--important text-center mt-20">Si no tiene su número de reservación para registrarse, con esta opción podrá obtenerlo</p>
+              </div>
+              <div class="col-xs-12">
+                <div class="row center-xs">
+                  <div class="col-xs-12 col-md-5">
+                    <button class="btn btn--secondary btn--block mt-15 mb-30 mt-40-md">OBTENER NÚMERO DE RESERVACIÓN</button>
+                  </div>
+                  <!-- <div class="col-xs-12 col-md-10">
+                    <img src="../src/images/bienvenida.png" alt="" />
+                  </div> -->
                 </div>
               </div>
             </div>

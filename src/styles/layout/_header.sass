@@ -18,3 +18,62 @@
         height: 40px
         margin: 0px 30px
         border-left: 1px solid #FFFFFF
+
+    &__brand
+        display: flex
+        flex-direction: row
+        align-items: center
+
+    &__navbar
+        display: flex
+
+        +media(">=md")
+            flex: auto
+            justify-content: space-between
+
+
+        .language
+            cursor: pointer
+
+            &:hover
+                & .language--menu
+                    display: block
+
+                & li span:before
+                    background-image: url("/src/images/arrows/arrow-up.png")
+
+            & li span:before
+                content: ""
+                background-image: url("/src/images/arrows/arrow-down.png")
+                background-repeat: no-repeat
+                height: 10px
+                width: 15px
+                display: inline-block
+                margin-right: 5px
+
+            & li.has-menu
+                position: relative
+
+            &--menu
+                display: none
+                position: absolute
+                background-color: #ffffff
+                min-width: 70px
+                color: $primaryColor
+                right: 0
+
+                li
+                    a
+                        display: block
+                        line-height: 35px
+                        padding: 0px 10px
+                        color: $primaryColor
+
+                    &:first-child
+                        border-bottom: 1px solid $gray
+
+                    &.active, &:hover
+                        background-color: $secondaryColor
+
+                        a
+                            color:#ffffff
