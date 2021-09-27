@@ -11,8 +11,9 @@ module.exports = {
       index: {
         // entry: "checkin",
         title: "Oasis Hotels & Resorts | Check In",
-        template: "./src/layout-index.ejs",
-        API_URL_TEMPLATE_VAR: "TEST",
+        // template: "./src/layout-index.ejs",
+        template: "!!ejs-compiled-loader!./src/layout-index.ejs",
+        APP_TITLE: "TEST",
         // '!!handlebars-loader!src/index.hbs'
         // minify: false,
         // inject: false,
@@ -92,12 +93,24 @@ module.exports = {
       },
     }),
     (neutrino) => {
+      console.log(neutrino);
       neutrino.config.plugin("provide").use(ProvidePlugin, [
         {
           $: "jquery",
           jQuery: "jquery",
         },
       ]);
+      neutrino.config.module
+        .rule("ejs")
+        .use()
+        .loader("ejs-compiled-loader")
+        .options({
+          htmlmin: true,
+          htmlminOptions: {
+            removeComments: true,
+          },
+        })
+        .end();
       neutrino.config.optimization.merge({
         splitChunks: {
           cacheGroups: {

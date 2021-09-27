@@ -26,7 +26,8 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P97847Q" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <%= require('html-loader!./partials/header.ejs') %>
+    <!-- <%= include('ejs-compiled-loader!./partials/header.ejs') %> -->
+    <!-- <%- include ('./partials/header.ejs') -%> -->
     <main class="main-container">
       <div class="content--main">
         <div class="content--main__left">
@@ -77,7 +78,7 @@
           </div>
         </div>
       </div>
-      <div class="fluid-container"><%= require('html-loader!./partials/footer.ejs') %></div>
+      <!-- <div class="fluid-container"><%= require('html-loader!./partials/footer.ejs') %></div> -->
     </main>
   </body>
 </html>
