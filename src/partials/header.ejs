@@ -9,13 +9,44 @@
       <span class="uppercase ml-5 bold">Inicio de Pre-Checkin</span>
     </div>
     <ul class="language ml-10">
-      <li><span>ES</span></li>
+      <li>
+        <button class="btn btn--primary btn--thin rounded transparent mr-10" data-target="modal-help" data-micromodal-trigger="modal-help" type="button">Ayuda</button>
+      </li>
+      <!-- <li><span>Español</span></li> -->
       <li class="has-menu">
+        <span>Español</span>
         <ul class="language--menu">
           <li class="active"><a href="">Español</a></li>
           <li><a href="#">Inglés</a></li>
         </ul>
       </li>
     </ul>
+  </div>
+  <!-- es a nivel global -->
+  <div class="modal micromodal-slide modal--lg" id="modal-help" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <button type="button" class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+        <header class="modal__header text-left">
+          <h2 class="title text-left uppercase"> 
+            <!-- <span class="icon icon-file-add icon--xs"></span>  -->
+            Recibe Ayuda</h2>
+            <p class="text-left lh-normal"><small>Si tiene alguna duda sobre las fechas de su reservación. Favor de redactarla y presionar el boton 'Enviar'. </small></p>
+        </header>
+        <main class="modal__content text-cernter">
+          <form action="#">
+            <div class="row bottom-xs center-xs">
+              <div class="col-xs-12">
+                <div class="field animated">
+                  <input type="text" name="message" id="message" placeholder="Escriba su mensaje" required />
+                  <label class="field__label" for="message"> Mensaje*</label>
+                </div>
+                <button class="btn btn--primary">Enviar</button>
+              </div>
+            </div>
+          </form>
+        </main>
+      </div>
+    </div>
   </div>
 </header>

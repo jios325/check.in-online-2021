@@ -1,76 +1,86 @@
 <div class="container">
-    <!-- class "check-form" required for front-end validations-->
-    <form action="" class="check-form-agency" enctype="multipart/form-data" method="post">
-      <h2 class="title uppercase mb-10 mt-30-md"><span class="icon icon-user mr-5"></span> Ingresa tus datos</h2>
-      <p class="paragraph--important mb-20">Para obtener tu número de reservación y puedas registrarte con la opción “Comprobante de agencia”, es necesario que nos proporciones los siguientes datos:    </p>
-      <div class="row bottom-xs start-md">
-        <div class="col-xs-12 col-md">
-          <div class="field animated">
-            <input type="text" name="confirmation_number" id="confirmation_number" placeholder="000000" required />
-            <label class="field__label" for="confirmation_number"> Comprobante de Agencia/Hotel*</label>
+  <!-- class "check-form" required for front-end validations-->
+  <form action="" class="check-form-agency" enctype="multipart/form-data" method="post">
+    <h2 class="title uppercase mb-10 mt-30-md"><span class="icon icon-user mr-5"></span> Ingresa tus datos</h2>
+    <p class="paragraph--important mb-20">
+      Para obtener tu número de reservación y puedas registrarte con la opción “Comprobante de agencia”, es necesario que nos proporciones los siguientes datos:
+    </p>
+    <div class="row bottom-xs start-md">
+      <div class="col-xs-12 col-md">
+        <div class="field animated">
+          <input type="text" name="confirmation_number" id="confirmation_number" placeholder="000000" required />
+          <label class="field__label" for="confirmation_number"> Comprobante de Agencia/Hotel*</label>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md">
+        <div class="field animated">
+          <input type="text" name="last_name" id="last_name" placeholder="Doe" required />
+          <label class="field__label" for="email">Apellidos*</label>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-2">
+        <div class="field animated">
+          <input type="text" name="arrival-date" id="arrival-date" placeholder="yyyy-mm-dd" required />
+          <label class="field__label" for="arrival-date">Fecha de llegada</label>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md">
+        <div class="field animated">
+          <input type="text" name="arrival-date" required />
+          <label class="field__label" for="arrival-date">Hotel</label>
+        </div>
+      </div>
+      <!-- fields added today 2021-11-19 10:30:36 -->
+      <div class="col-xs-12">
+        <div class="row">
+          <div class="col-xs-12 col-md mw-28-md">
+            <div class="field animated">
+              <input type="text" name="email" required />
+              <label class="field__label" for="email">Correo*</label>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md">
+            <div class="field animated">
+              <input type="text" name="email" required />
+              <label class="field__label" for="email">Observaciones</label>
+            </div>
           </div>
         </div>
-        <div class="col-xs-12 col-md">
-          <div class="field animated">
-            <input type="text" name="last_name" id="last_name" placeholder="Doe" required />
-            <label class="field__label" for="email">Apellidos</label>
+      </div>
+
+      <div class="col-xs-12 col-md-12 mt-35-md">
+        <div class="row center-sm">
+          <div class="col-xs-12 col-md-5">
+            <button class="btn btn--secondary btn--block-xs mr-5 mb-10" type="button"> <span class="icon icon--md icon-cross"></span> Cerrar</button>
+            <button type="submit" class="btn btn--block-xs btn--primary">Finalizar Precheckin</button>
           </div>
         </div>
-        <div class="col-xs-12 col-md-2">
-            <div class="field animated">
-              <input type="text" name="arrival-date" id="arrival-date" placeholder="yyyy-mm-dd" required />
-              <label class="field__label" for="arrival-date">Fecha de llegada</label>
-            </div>
-        </div>
-        <div class="col-xs-12 col-md">
-            <div class="field animated">
-              <input type="text" name="arrival-date" required />
-              <label class="field__label" for="arrival-date">Hotel</label>
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-12 mt-35-md">
-          <div class="row center-md">
-            <div class="col-xs-12 first-md">
-              <div class="text-center mb-10">
-                <label class="checkbox"
-                  >Acepto las politicas del Hotel
-                  <input type="checkbox" name="policies-check" id="policies-check" />
-                  <!-- <input type="checkbox" name="policies-check" id="policies-check" required /> -->
-                  <div class="checkbox__marker"></div>
+      </div>
+    </div>
+    <div class="modal micromodal-slide" id="modal-upload-personal" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <button type="button" class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          <header class="modal__header">
+            <h2 class="title text-center"><span class="icon icon-file-add icon--xs"></span> Pasaporte</h2>
+            <p class="paragraph--important text-center mb-15 mt-15">Agrega tu pasaporte escaneado</p>
+          </header>
+          <main class="modal__content text-cernter">
+            <div class="row center-xs">
+              <div class="col-xs-12 col-md-8">
+                <label for="uploadImage" class="upload__image">
+                  <p class="text-center">
+                    <span class="icon icon-cloud-upload icon--lg"></span> <br />
+                    Subir documento
+                  </p>
+                  <input accept="image/*" type="file" id="uploadImage" class="upload__btn" data-btn="modal-upload-personal" />
                 </label>
+                <button type="button" class="btn btn--secondary text-center btn--block mt-15">Subir</button>
               </div>
             </div>
-            <div class="col-xs-12 col-md-3">
-              <button type="submit" class="btn btn--primary btn--block">Finalizar Precheckin</button>
-            </div>
-          </div>
+          </main>
         </div>
       </div>
-      <div class="modal micromodal-slide" id="modal-upload-personal" aria-hidden="true">
-        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-          <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-            <button type="button" class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-            <header class="modal__header">
-              <h2 class="title text-center"><span class="icon icon-file-add icon--xs"></span> Pasaporte</h2>
-              <p class="paragraph--important text-center mb-15 mt-15">Agrega tu pasaporte escaneado</p>
-            </header>
-            <main class="modal__content text-cernter">
-              <div class="row center-xs">
-                <div class="col-xs-12 col-md-8">
-                  <label for="uploadImage" class="upload__image">
-                    <p class="text-center">
-                      <span class="icon icon-cloud-upload icon--lg"></span> <br />
-                      Subir documento
-                    </p>
-                    <input accept="image/*" type="file" id="uploadImage" class="upload__btn" data-btn="modal-upload-personal"/>
-                  </label>
-                  <button type="button" class="btn btn--secondary text-center btn--block mt-15">Subir</button>
-                </div>
-              </div>
-            </main>
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>
-  
+    </div>
+  </form>
+</div>

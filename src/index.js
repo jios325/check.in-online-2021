@@ -21,6 +21,7 @@ $("body").on("change", ".upload__btn", function (event) {
 
 // Incializamos Los modals
 MicroModal.init();
+console.log("MicroModal iniciado");
 
 // Only for validation front, this doesnt should affect another listeners
 // there is only one input field now, remove not used code

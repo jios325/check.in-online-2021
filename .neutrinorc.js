@@ -11,17 +11,17 @@ module.exports = {
       index: {
         // entry: "checkin",
         title: "Oasis Hotels & Resorts | Check In",
-        // template: "./src/layout-index.ejs",
-        template: "!!ejs-compiled-loader!./src/layout-index.ejs",
+        template: "./src/layout-index.ejs",
+        // template: "!!ejs-compiled-loader!./src/layout-index.ejs",
         APP_TITLE: "TEST",
         // '!!handlebars-loader!src/index.hbs'
         // minify: false,
         // inject: false,
       },
-      checkin: {
+      comprobante_agencia: {
         entry: "index",
         template: "./src/layout.ejs",
-        title: "Oasis Hotels & Resorts | Check In Data",
+        title: "Oasis Hotels & Resorts | Check In Comprobante de Agencia",
         // minify: false,
         minify: {
           collapseWhitespace: true,
@@ -33,7 +33,7 @@ module.exports = {
           useShortDoctype: true,
         },
       },
-      checkin_agency: {
+      pasaporte: {
         entry: "index",
         template: "./src/layout-agencia.ejs",
         title: "Oasis Hotels & Resorts | Check In By Agency",
@@ -48,7 +48,7 @@ module.exports = {
           useShortDoctype: true,
         },
       },
-      res_number: {
+      reserva: {
         entry: "index",
         template: "./src/res_number.ejs",
         title: "Oasis Hotels & Resorts | Get Reservation Number",
@@ -63,23 +63,23 @@ module.exports = {
           useShortDoctype: true,
         },
       },
-      success: {
-        title: "Oasis Hotels & Resorts | Success Page",
-        template: "./src/layout-success.ejs",
-        entry: "index",
-        // minify: false,
-      },
-      success2: {
-        title: "Oasis Hotels & Resorts | Success Page",
-        template: "./src/layout-success2.ejs",
-        entry: "index",
-        // minify: false,
-      },
-      unsuccessful: {
-        title: "Oasis Hotels & Resorts | Unsuccess Page",
-        entry: "index",
-        template: "./src/layout-unsuccess.ejs",
-      },
+      // success: {
+      //   title: "Oasis Hotels & Resorts | Success Page",
+      //   template: "./src/layout-success.ejs",
+      //   entry: "index",
+      //   // minify: false,
+      // },
+      // success2: {
+      //   title: "Oasis Hotels & Resorts | Success Page",
+      //   template: "./src/layout-success2.ejs",
+      //   entry: "index",
+      //   // minify: false,
+      // },
+      // unsuccessful: {
+      //   title: "Oasis Hotels & Resorts | Unsuccess Page",
+      //   entry: "index",
+      //   template: "./src/layout-unsuccess.ejs",
+      // },
     },
   },
   use: [
@@ -100,17 +100,17 @@ module.exports = {
           jQuery: "jquery",
         },
       ]);
-      neutrino.config.module
-        .rule("ejs")
-        .use()
-        .loader("ejs-compiled-loader")
-        .options({
-          htmlmin: true,
-          htmlminOptions: {
-            removeComments: true,
-          },
-        })
-        .end();
+      // neutrino.config.module
+      //   .rule("ejs")
+      //   .use()
+      //   .loader("ejs-compiled-loader")
+      //   .options({
+      //     htmlmin: true,
+      //     htmlminOptions: {
+      //       removeComments: true,
+      //     },
+      //   })
+      //   .end();
       neutrino.config.optimization.merge({
         splitChunks: {
           cacheGroups: {
