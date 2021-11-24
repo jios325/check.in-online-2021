@@ -1,4 +1,4 @@
-input[type="text"], input[type="number"], input[type="date"]
+input[type="text"], input[type="number"], input[type="date"],select
     font-size: em(16)
     border: 0
     font-family: inherit
@@ -57,7 +57,18 @@ input[type="text"], input[type="number"], input[type="date"]
     position: relative
     height: 56px
     line-height: 56px
-
+    &.select
+        &::after
+            content: "\42"
+            font-family: $iconFont
+            color: $secondaryColor
+            display: inline-block
+            position: absolute
+            right: 10px
+            user-select: none
+            pointer-events: none
+        input[type="text"], input[type="number"], input[type="date"]
+            padding-right: 30px
     &__label
         // text-transform: uppercase
         letter-spacing: 0.05em
@@ -90,9 +101,13 @@ input[type="file"]
 .upload__image
     display: inline-block
     box-sizing: border-box
-    height: 148px
-    width: 153px
-    border: 1px dashed #444444
+    height: 130px
+    width: 133px
+    background: linear-gradient(to right, $secondaryColor 33%, #fff 0%) top/20px 1px repeat-x, //top
+    linear-gradient($secondaryColor 33%, #fff 0%) right/1px 20px repeat-y, //right
+    linear-gradient(to right, $secondaryColor 33%, #fff 0%) bottom/20px 1px repeat-x, //* bottom */
+    linear-gradient($secondaryColor 33%, #fff 0%) left/1px 20px repeat-y //* left */
+
     border-radius: 5px
     cursor: pointer
     display: flex
@@ -100,6 +115,8 @@ input[type="file"]
     align-items: center
     margin: 0 auto
     color: $secondaryColor
+    span
+        color: $secondaryColor
     &:hover
         border-color: $secondaryColor
 

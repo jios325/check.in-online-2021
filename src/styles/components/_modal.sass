@@ -1,9 +1,14 @@
 .modal
     // font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif
     font-family: $primaryFont
-    &--lg
-        .modal__container
-            min-width: 700px
+    +media(">=md")
+        &--lg
+            .modal__container
+                min-width: 700px
+
+        &--xl
+            .modal__container
+                min-width: 800px
 .modal__overlay
     position: fixed
     top: 0

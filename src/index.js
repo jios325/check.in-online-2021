@@ -13,6 +13,14 @@ if ($("#arrival-date").length > 0) {
     // startDate: new Date(),
   });
 }
+if ($(".date-picker").length > 0) {
+  $(".date-picker").each(function () {
+    new Litepicker({
+      element: this,
+      minDate: new Date(),
+    });
+  });
+}
 $("body").on("change", ".upload__btn", function (event) {
   event.stopPropagation();
   event.stopImmediatePropagation();

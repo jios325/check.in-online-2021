@@ -19,15 +19,20 @@
         </div>
       </div>
       <div class="col-xs-12 col-md-2">
-        <div class="field animated">
+        <div class="field animated select">
           <input type="text" name="arrival-date" id="arrival-date" placeholder="yyyy-mm-dd" required />
           <label class="field__label" for="arrival-date">Fecha de llegada</label>
         </div>
       </div>
-      <div class="col-xs-12 col-md">
-        <div class="field animated">
-          <input type="text" name="arrival-date" required />
-          <label class="field__label" for="arrival-date">Hotel</label>
+      <div class="col-xs-12 col-md-3">
+        <div class="field animated select">
+          <!-- <input type="text" name="gender" id="gender" placeholder="Doe" required /> -->
+          <select name="hotel" id="hotel">
+            <option value="" selected disabled>Seleciona una opcion</option>
+            <option value="male">Hotel 1</option>
+            <option value="female">Hotel 2</option>
+          </select>
+          <label class="field__label" for="hotel">Genero</label>
         </div>
       </div>
       <!-- fields added today 2021-11-19 10:30:36 -->
@@ -52,33 +57,8 @@
         <div class="row center-sm">
           <div class="col-xs-12 col-md-5">
             <button class="btn btn--secondary btn--block-xs mr-5 mb-10" type="button"> <span class="icon icon--md icon-cross"></span> Cerrar</button>
-            <button type="submit" class="btn btn--block-xs btn--primary">Finalizar Precheckin</button>
+            <button type="submit" class="btn btn--block-xs btn--primary">Obtener numero de reserva</button>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal micromodal-slide" id="modal-upload-personal" aria-hidden="true">
-      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-          <button type="button" class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-          <header class="modal__header">
-            <h2 class="title text-center"><span class="icon icon-file-add icon--xs"></span> Pasaporte</h2>
-            <p class="paragraph--important text-center mb-15 mt-15">Agrega tu pasaporte escaneado</p>
-          </header>
-          <main class="modal__content text-cernter">
-            <div class="row center-xs">
-              <div class="col-xs-12 col-md-8">
-                <label for="uploadImage" class="upload__image">
-                  <p class="text-center">
-                    <span class="icon icon-cloud-upload icon--lg"></span> <br />
-                    Subir documento
-                  </p>
-                  <input accept="image/*" type="file" id="uploadImage" class="upload__btn" data-btn="modal-upload-personal" />
-                </label>
-                <button type="button" class="btn btn--secondary text-center btn--block mt-15">Subir</button>
-              </div>
-            </div>
-          </main>
         </div>
       </div>
     </div>

@@ -107,3 +107,24 @@
 .icon-cloud-upload:before {
   content: "\77";
 }
+.icon-pencil:before {
+  content: "\78";
+}
+.icon-sync:before {
+  content: "\79";
+}
+.icon-magnifier:before {
+  content: "\7a";
+}
+.icon-chevron-left:before {
+  content: "\41";
+}
+.icon-chevron-down:before {
+  content: "\42";
+}
+.icon-chevron-right:before {
+  content: "\43";
+}
+.icon-chevron-up:before {
+  content: "\44";
+}

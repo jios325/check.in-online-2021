@@ -22,3 +22,19 @@
             letter-spacing: 0
             line-height: 14px
             text-align: center
+        &--lg span
+            font-size: 14px
+            line-height: 16px
+    &--left
+        &:after
+            width: 100%
+            border-bottom: 1px solid rgba($secondaryColor, 0.2)
+        &:before
+            display: none
+        & > span
+            padding-left: 0px
+    &--primary
+        & > span
+            color: $secondaryColor
+    &.no-border
+        border: none

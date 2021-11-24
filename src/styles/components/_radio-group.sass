@@ -1,0 +1,45 @@
+.radio-group
+    display: inline-block
+    position: relative
+    padding-left: 25px
+    margin-bottom: 10px
+    cursor: pointer
+    color: rgba(0,0,0,0.65)
+    letter-spacing: 0
+    line-height: 22px
+    font-size: em(14)
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    & > input[type="radio"]
+        opacity: 0
+        visibility: hidden
+        width: 16px
+        height: 16px
+        &:checked  ~ .radio-group__marker
+            // background-color: $secondaryColor
+            &:after
+                display: block
+                background-color: $secondaryColor
+
+    &__marker
+        position: absolute
+        top: -1px
+        left: 0px
+        height: 24px
+        width: 24px
+        background-color: #ffffff
+        border-radius: 24px
+        border: 1px solid $secondaryColor
+        margin-right: 5px
+        &:after
+            content: ""
+            position: absolute
+            display: none
+            left: 3px
+            top: 3px
+            width: 16px
+            height: 16px
+            border-radius: 16px
+            background-color: #ffffff

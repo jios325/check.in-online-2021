@@ -6,15 +6,16 @@
   <div class="header__navbar">
     <div class="header__navbar__title">
       <span class="icon icon-exit icon--lg"></span>
-      <span class="uppercase ml-5 bold">Inicio de Pre-Checkin</span>
+      <!-- <%= htmlWebpackPlugin.options.options.test %> -->
+      <span class="uppercase ml-5 bold"><%-title-%> </span>
     </div>
     <ul class="language ml-10">
       <li>
-        <button class="btn btn--primary btn--thin rounded transparent mr-10" data-target="modal-help" data-micromodal-trigger="modal-help" type="button">Ayuda</button>
+        <button class="btn btn--primary btn--thin rounded transparent dynamic--button" data-target="modal-help" data-micromodal-trigger="modal-help" type="button"><span class="icon icon--md icon-question-circle mr-5"></span> <span class=" hidden-xs capitalize fs-18">Ayuda</span></button>
       </li>
       <!-- <li><span>Español</span></li> -->
       <li class="has-menu">
-        <span>Español</span>
+        <span class="carret">Español</span>
         <ul class="language--menu">
           <li class="active"><a href="">Español</a></li>
           <li><a href="#">Inglés</a></li>

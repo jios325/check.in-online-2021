@@ -26,8 +26,9 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P97847Q" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <%= require('html-loader!./partials/header.ejs') %>
-
+    <% var title = htmlWebpackPlugin.options.titleNav; %>
+    
+    <%- include partials/header -%>
     
     <main class="main-container">
       <div class="content--main">
@@ -50,25 +51,25 @@
         <div class="content--main__right">
           <div class="container--fluid">
             <div class="row center-md">
-              <div class="col-xs-12 col-md-8">
+              <div class="col-xs-12 col-lg-9">
                 <div class="text-center mt-10 mt-60-md">
                   <img class="w-100" src="src/images/logo.png" alt="" />
                 </div>
                 <h2 class="title text-center mb-15 mb-20-md mt-20 mt-40-md">Seleccione su método de registro</h2>
                 <div class="row">
                   <div class="col-xs-12 col-md-6">
-                    <a href="" class="btn btn--secondary btn--block mb-10">COMPROBANTE DE AGENCIA</a>
+                    <a href="./comprobante_agencia.html" class="btn btn--secondary btn--block mb-10">COMPROBANTE DE AGENCIA</a>
                   </div>
                   <div class="col-xs-12 col-md-6">
-                    <a href="" class="btn btn--secondary btn--block">ESCANEO DE PASAPORTE</a>
+                    <a href="./pasaporte.html" class="btn btn--secondary btn--block">ESCANEO DE PASAPORTE</a>
                   </div>
                 </div>
                 <p class="paragraph--important text-center mt-20">Si no tiene su número de reservación para registrarse, con esta opción podrá obtenerlo</p>
               </div>
               <div class="col-xs-12">
                 <div class="row center-xs">
-                  <div class="col-xs-12 col-md-5">
-                    <button class="btn btn--secondary btn--block mt-15 mb-30 mt-40-md">OBTENER NÚMERO DE RESERVACIÓN</button>
+                  <div class="col-xs-12 col-md-10 col-lg-5">
+                    <a href="./reserva.html" class="btn btn--secondary btn--block mt-15 mb-30 mt-40-md">OBTENER NÚMERO DE RESERVACIÓN</a>
                   </div>
                   <!-- <div class="col-xs-12 col-md-10">
                     <img src="../src/images/bienvenida.png" alt="" />
@@ -79,7 +80,7 @@
           </div>
         </div>
       </div>
-      <div class="fluid-container"><%= require('html-loader!./partials/footer.ejs') %></div>
+      <div class="fluid-container"><%- include partials/footer -%></div>
     </main>
   </body>
 </html>

@@ -26,7 +26,8 @@
       <!-- Google Tag Manager (noscript) -->
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P97847Q" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
       <!-- End Google Tag Manager (noscript) -->
-    <%= require('html-loader!./partials/header.ejs') %>
+      <% var title = htmlWebpackPlugin.options.titleNav; %>
+      <%- include partials/header -%>
     <main class="main-container">
       <div class="content">
         <div class="container">
@@ -56,7 +57,7 @@
           </div>
         </div>
       </div>
-      <div class="fluid-container"><%= require('html-loader!./partials/footer.ejs') %></div>
+      <div class="fluid-container"><%- include partials/footer -%></div>
     </main>
     
   </body>

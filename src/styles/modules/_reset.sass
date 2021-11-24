@@ -63,6 +63,8 @@ select:disabled, input[type=text]:disabled, input[type=number]:disabled, input[t
 
     &::placeholder
         color: $lightGray
+select:not(:focus):invalid
+    color: green
 
 input[type=submit]
     &:disabled

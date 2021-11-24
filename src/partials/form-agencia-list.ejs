@@ -1,0 +1,148 @@
+<div class="container-fluid">
+  <!-- class "check-form" required for front-end validations-->
+  <form action="" class="check-form-agency" method="post">
+    <!-- <form action="" class="check-form-agency" enctype="multipart/form-data" method="post"> -->
+    <h2 class="title uppercase mb-10 mt-30-md"><span class="icon icon-user mr-5"></span> Ingresa tus datos</h2>
+    <p class="paragraph--important mb-20">Para localizar tu reserva necesitamos que nos proporciones los siguientes datos:</p>
+    <div class="row bottom-xs start-md">
+      <div class="col-xs-12 col-md-4">
+        <div class="field animated">
+          <input type="text" name="confirmation_number" id="confirmation_number" placeholder="000000" required />
+          <label class="field__label" for="confirmation_number"> Comprobante de Agencia/Hotel*</label>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <div class="field animated">
+          <input type="text" name="last_name" id="last_name" placeholder="Doe" required />
+          <label class="field__label" for="email">Apellidos</label>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-1">
+        <button class="btn btn--secondary btn--block mb-1rem" id="search-agency"><span class="icon icon-magnifier"></span> Buscar</button>
+      </div>
+    </div>
+  </form>
+  <div class="row bottom-xs start-md">
+    <div class="col-xs-12">
+      <hr class="separator mt-20-md mt-5 mb-20" />
+      <!-- Empieza Contenido de Usuarios-->
+      <div class="data-container pt-15 pb-15 pr-15 pl-15 mt-10 mb-10">
+        <div class="data-container__title mb-10">Reserva 6546546456</div>
+        <div class="data-container__body">
+          <div class="data-container__item">
+            <div class="separator--text separator--text--lg separator--left separator--primary mb-10"><span>Principal</span></div>
+            <div class="flex-table">
+              <div class="flex-table__tr">
+                <div class="flex-table__th">Name</div>
+                <div class="flex-table__th">Last Name</div>
+                <div class="flex-table__th">Status</div>
+                <div class="flex-table__th">Data</div>
+              </div>
+              <div class="flex-table__tr">
+                <div data-title="Name" class="flex-table__td">Maximiliano De Jesus</div>
+                <div data-title="Last Name" class="flex-table__td">Tecnologico de Monterrey</div>
+                <div data-title="Status" class="flex-table__td">Pendiente</div>
+                <div class="flex-table__td">
+                  <a href="./comprobante_agencia_form.html" class="btn btn--x-thin btn--transparent no-mwidth-md"><span class="icon icon-pencil"></span> Registrar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="data-container__item">
+            <div class="separator--text separator--text--lg separator--left separator--primary mt-10"><span>Acompañantes</span></div>
+            <div class="flex-table">
+              <!-- No lleva Header -->
+              <div class="flex-table__tr pt-10 pb-10">
+                <div data-title="Name" class="flex-table__td empty"></div>
+                <div data-title="Last Name" class="flex-table__td empty"></div>
+                <div data-title="Status" class="flex-table__td">Pendiente</div>
+                <div class="flex-table__td">
+                  <a href="./comprobante_agencia_form.html" class="btn btn--x-thin btn--transparent no-mwidth-md"><span class="icon icon-pencil"></span> Registrar</a>
+                </div>
+                <!-- <div class="flex-table__td">
+                  <button class="btn btn--x-thin btn--transparent no-mwidth-md" type="button" data-target="acompaniante-1" data-micromodal-trigger="acompaniante-1">
+                    <span class="icon icon-pencil"></span> Registrar
+                  </button>
+                </div> -->
+              </div>
+              <div class="flex-table__tr">
+                <div data-title="Name" class="flex-table__td">Maximiliano De Jesus</div>
+                <div data-title="Last Name" class="flex-table__td">Tecnologico</div>
+                <div data-title="Status" class="flex-table__td">Completo</div>
+                <!-- <div class="flex-table__td">
+                  <button
+                    disabled="disabled"
+                    class="btn btn--x-thin btn--transparent no-mwidth-md"
+                    type="button"
+                    data-target="acompaniante-1"
+                    data-micromodal-trigger="acompaniante-1"
+                  >
+                    <span class="icon icon-pencil"></span> Registrar
+                  </button>
+                </div> -->
+                <div class="flex-table__td">
+                  <a href="./comprobante_agencia_form.html" class="btn btn--x-thin btn--transparent no-mwidth-md"><span class="icon icon-pencil"></span> Registrar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-container__footer">
+          <button class="btn btn--primary btn--thin mt-30 mb-10" disabled="disabled">Finalizar Precheckin</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-12 mt-35-md">
+      <div class="row center-md">
+        <div class="col-xs-12 col-md-3">
+          <button type="submit" class="btn btn--secondary btn--block">Regresar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Este modal se puede duplicar por cada acompañante cambia ID -->
+  <!-- <div class="modal modal--xl micromodal-slide" id="acompaniante-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <button type="button" class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+     
+        <main class="modal__content text-center no-margin">
+          <form action="">
+            <div class="row bottom-xs">
+              <div class="col-xs-12 col-md-4">
+                <div class="field animated">
+                  <input type="text" name="name" id="name" placeholder="" required />
+                  <label class="field__label" for="name"> Name*</label>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-4">
+                <div class="field animated">
+                  <input type="text" name="last_name" id="last_name" placeholder="Doe" required />
+                  <label class="field__label" for="email">Apellidos</label>
+                </div>
+              </div>
+              <div class="col-xs-12">
+                <div class="row start-xs bottom-xs">
+                  <div class="col-xs-12 col-md mw-150">
+                    <label for="uploadImage" class="upload__image no-margin">
+                      <p class="text-center">
+                        <span class="icon icon-file-add icon--xl"></span> <br />
+                      </p>
+                      <input accept="image/*" type="file" id="uploadImage" class="upload__btn" data-btn="modal-upload-personal" required />
+                    </label>
+                  </div>
+                  <div class="col-xs-12 col-md-9">
+                    <p class="text-left mt-10">
+                      Enviar foto de las dos páginas completas del pasaporte o ambas caras del INE. Importante que todos los datos se lean con claridad.
+                    </p>
+                    <button type="submit" class="btn btn--secondary btn--thin text-center mt-15">Subir Pasaporte / INE</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </main>
+      </div>
+    </div>
+  </div> -->
+</div>

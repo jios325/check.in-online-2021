@@ -6,7 +6,8 @@
     padding-left: 10px
     border-radius: 4px
     font-size: 14px
-    font-weight: bold
+    font-family: $primaryFont
+    // font-weight: regular
 
     // font-size: em(14)
     text-transform: uppercase
@@ -27,8 +28,8 @@
     &.rounded
         border-radius: 40px
     &.transparent
-        border: 1px solid #ffffff
-        background-color: transparent
+        // border: 1px solid #ffffff
+        background-color: rgba(255,255,255,0.1)
         color: #ffffff
         &:hover
             background-color: #ffffff
@@ -43,7 +44,9 @@
         text-align: center
         border: 1px solid $primaryColor
         cursor: pointer
-
+        &--primary
+            color: $secondaryColor
+            border: 1px solid $secondaryColor
     &--alert
         color: $redColor
         border: 1px solid $redColor
@@ -51,9 +54,16 @@
     &--primary
         +button($secondaryColor, #ffffff, transparent)
 
+    &--link
+        +button(transparent, $primaryColor, transparent)
+
     &--secondary
         +button(#ffffff, $secondaryColor, $secondaryColor)
-
+    &--transparent
+        +button(transparent, $secondaryColor, $secondaryColor)
+        &:hover
+            background-color: #ffffff
+            color: #000000
     &--block
         width: 100%
         &-xs
@@ -62,6 +72,9 @@
     &--thin
         min-height: 35px
         line-height: 35px
+    &--x-thin
+        min-height: 25px
+        line-height: 25px
     &:disabled
         opacity: 0.35
         background-color: $gray

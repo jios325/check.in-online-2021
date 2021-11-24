@@ -48,6 +48,11 @@
         &-md
             +media(">=md")
                 padding-left: ($num * 5px) !important
+    .pr-#{$num * 5}
+        padding-right: ($num * 5px) !important
+        &-md
+            +media(">=md")
+                padding-right: ($num * 5px) !important
 
 .margin-auto
     margin: 0 auto !important
@@ -247,3 +252,24 @@
         max-width: 27.8%
 .lh-normal
     line-height: 1.5
+.mb-1rem
+    margin-bottom: 1rem
+.fs-18
+    font-size: 18px
+
+.dynamic--button
+    width: 40px!important
+    min-width: initial!important
+    text-align: center
+    +media(">=md")
+        width: 120px!important
+        margin-right: 15px
+.no-mwidth
+    min-width: initial!important
+    &-md
+        +media(">=md")
+            min-width: initial!important
+.mw-150
+    max-width: 150px!important
+.link
+    color: $secondaryColor
