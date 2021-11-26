@@ -26,22 +26,6 @@ input[type="text"], input[type="number"], input[type="date"],select
         outline: none
         border-bottom: 0
 
-    //cuando esta el placeholder centro la etiqueta
-    // &:placeholder-shown + label
-    //     background: #ffffff
-    //     top: 50%
-    //     left: 15px
-    //     cursor: text
-    //     color: darken($gray, 30%)
-    //     font-size: em(16)
-
-    // &:not(:placeholder-shown), &:focus + label
-    //     top: 0
-    //     left: 5px
-    // &:focus + label
-    //     color: $secondaryColor
-    //     font-size: em(12)
-
 
 \::-webkit-input-placeholder
     // opacity: 0
@@ -101,13 +85,15 @@ input[type="file"]
 .upload__image
     display: inline-block
     box-sizing: border-box
-    height: 130px
-    width: 133px
+    height: 75px
+    width: 75px
     background: linear-gradient(to right, $secondaryColor 33%, #fff 0%) top/20px 1px repeat-x, //top
     linear-gradient($secondaryColor 33%, #fff 0%) right/1px 20px repeat-y, //right
     linear-gradient(to right, $secondaryColor 33%, #fff 0%) bottom/20px 1px repeat-x, //* bottom */
     linear-gradient($secondaryColor 33%, #fff 0%) left/1px 20px repeat-y //* left */
-
+    +media('>=md')
+        height: 130px
+        width: 133px
     border-radius: 5px
     cursor: pointer
     display: flex

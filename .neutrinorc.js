@@ -5,7 +5,8 @@ const styleMinify = require("@neutrinojs/style-minify");
 const { ProvidePlugin } = require("webpack");
 const htmlTemplate = require("@neutrinojs/html-template");
 const html = require("@neutrinojs/html-loader");
-
+process.env.NODE_ENV = process.env.NODE_ENV || "development";
+console.log(process.env.NODE_ENV);
 module.exports = {
   options: {
     mains: {
@@ -13,7 +14,7 @@ module.exports = {
         // entry: "checkin",
         options: {
           version: "1.0",
-          test: "MAX",
+          test: "TEst",
         },
         titleNav: "Inicio Pre-Check in",
         title: "Oasis Hotels & Resorts | Check In",
@@ -24,7 +25,7 @@ module.exports = {
         entry: "index",
         options: {
           version: "1.0",
-          test: "MAX",
+          test: "TEst",
         },
         titleNav: "Comprobante agencia",
         template: "!!ejs-compiled-loader!./src/layout-agencia.ejs",
@@ -124,7 +125,7 @@ module.exports = {
   use: [
     // standard(),
     web({
-      publicPath: "./",
+      publicPath: process.env.NODE_ENV == "production" ? "./" : "/",
       minify: {
         // Javascript minification occurs only in production by default.
         // To change uglify-es options or switch to another minifier, see below.

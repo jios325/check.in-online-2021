@@ -1,0 +1,26 @@
+.collapse
+    +media("<md")
+        &__header
+            height: 35px
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 1px solid $secondaryColor
+            border-radius: 4px
+            position: relative
+
+            &::after
+                content: "B"
+                font-family: $iconFont
+                display: block
+                position: absolute
+                right: 10px
+                top: 50%
+                transform: translateY(-50%)
+
+            h2
+                margin: 0 !important
+
+        &__content
+            padding: 10px
+            display: none

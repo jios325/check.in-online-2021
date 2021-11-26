@@ -26,16 +26,18 @@
 
     &__navbar
         display: flex
+        flex: auto
+        justify-content: space-between
 
-        +media(">=md")
-            flex: auto
-            justify-content: space-between
+        &__title
+            font-size: 12px
 
+            +media("<md")
+                margin-left: 10px
 
         .language
             cursor: pointer
             display: flex
-            
 
             & li span.carret:before
                 content: ""
@@ -48,6 +50,7 @@
 
             & li.has-menu
                 position: relative
+
                 &:hover
                     & .language--menu
                         display: block

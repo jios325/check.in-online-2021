@@ -52,6 +52,19 @@ $(".check-form").on("submit", function (event) {
     return false;
   }
 });
+
+$(".collapse").on("click", ".collapse__header", function (e) {
+  const $this = $(this);
+  const $content = $this.siblings(".collapse__content");
+  if ($(window).width() < 768) {
+    if ($content.css("display") == "block") {
+      $content.hide();
+    } else {
+      $content.show();
+    }
+  }
+});
+
 if (module.hot) {
   module.hot.accept();
 }
