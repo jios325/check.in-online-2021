@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-P97847Q");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P97847Q" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <% var title = htmlWebpackPlugin.options.titleNav; %> <%- include partials/header -%>
+    <main class="main-container">
+      <div class="content content--center">
+        <div class="container">
+          <div class="row center-md">
+            <h1 class="mb-20">MODALS</h1>
+            <div class="separator mb-20 mt-20"></div>
+            <button class="btn btn--primary mr-10" data-target="modal-error" data-micromodal-trigger="modal-error" type="button">Modal Error</button>
+            <button class="btn btn--primary mr-10" data-target="modal-nodata" data-micromodal-trigger="modal-nodata" type="button">No data</button>
+            <button class="btn btn--primary mr-10" data-target="modal-ocr" data-micromodal-trigger="modal-ocr" type="button">Actualizar datos</button>
+            <!-- Modal 1 -->
+
+            <div class="modal micromodal-slide" id="modal-error" aria-hidden="true">
+              <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                  <button type="button" class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                  <main class="modal__content text-cernter">
+                    <div class="row mt-30 center-xs">
+                      <div class="col-xs-12 col-md-10">
+                        <p class="color--danger mb-20 mb-30-md">
+                          El análisis del pasaporte falló. La calidad de imagen de su DNI no permite su análisis. ¿Quieres usar esta imagen y proporcionar tu información
+                          manualmente?
+                        </p>
+                      </div>
+                      <div class="col-xs-12">
+                        <button class="btn btn--thin btn--secondary mr-10">Aceptar</button>
+                        <button class="btn btn--thin btn--secondary">Subir de Nuevo</button>
+                      </div>
+                      <div class="col-xs-6"></div>
+                    </div>
+                  </main>
+                </div>
+              </div>
+            </div>
+            <!-- modal no data -->
+            <div class="modal micromodal-slide" id="modal-nodata" aria-hidden="true">
+              <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                  <button type="button" class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                  <main class="modal__content text-cernter">
+                    <div class="row mt-30 center-xs">
+                      <div class="col-xs-12 col-md-10">
+                        <h2 class="title mb-20 mb-30-md">No se encontraron datos, ¿Quieres registrar tus datos de forma manual?</h2>
+                      </div>
+                      <div class="col-xs-12">
+                        <button class="btn btn--thin btn--primary">Registrar Datos</button>
+                      </div>
+                      <div class="col-xs-6"></div>
+                    </div>
+                  </main>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal micromodal-slide" id="modal-ocr" aria-hidden="true">
+                <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                  <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                    <button type="button" class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                    <main class="modal__content text-cernter">
+                      <div class="row mt-30 center-xs">
+                        <div class="col-xs-12 col-md-10">
+                          <h2 class="title mb-20 mb-30-md">¿Deseas remplazar tus datos con los de tu ID?  </h2>
+                        </div>
+                        <div class="col-xs-12">
+                          <button class="btn btn--thin btn--primary">Actualizar Datos</button>
+                        </div>
+                        <div class="col-xs-6"></div>
+                      </div>
+                    </main>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="fluid-container"><%- include partials/footer -%></div> -->
+    </main>
+  </body>
+</html>

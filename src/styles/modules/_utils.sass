@@ -287,7 +287,13 @@
             min-width: initial !important
 
 .mw-150
-    max-width: 150px !important
+    +media(">=md")
+        max-width: 150px !important
 
 .link
     color: $secondaryColor
+.no-mb-md
+    +media(">=md")
+        margin-bottom: 0 !important
+.color--danger
+    color: $dangerColor !important

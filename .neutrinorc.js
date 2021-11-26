@@ -20,6 +20,7 @@ module.exports = {
         title: "Oasis Hotels & Resorts | Check In",
         template: "!!ejs-compiled-loader!./src/layout-index.ejs",
         APP_TITLE: "TEST",
+        minify: false,
       },
       comprobante_agencia: {
         entry: "index",
@@ -30,16 +31,16 @@ module.exports = {
         titleNav: "Comprobante agencia",
         template: "!!ejs-compiled-loader!./src/layout-agencia.ejs",
         title: "Oasis Hotels & Resorts | Check In Comprobante de Agencia",
-        // minify: false,
-        minify: {
-          collapseWhitespace: true,
-          keepClosingSlash: true,
-          removeComments: true,
-          removeRedundantAttributes: false, // do not remove type="text"
-          removeScriptTypeAttributes: true,
-          removeStyleLinkTypeAttributes: true,
-          useShortDoctype: true,
-        },
+        minify: false,
+        // minify: {
+        //   collapseWhitespace: false,
+        //   keepClosingSlash: true,
+        //   removeComments: false,
+        //   removeRedundantAttributes: false, // do not remove type="text"
+        //   removeScriptTypeAttributes: true,
+        //   removeStyleLinkTypeAttributes: true,
+        //   useShortDoctype: true,
+        // },
       },
       comprobante_agencia_form: {
         entry: "index",
@@ -49,16 +50,16 @@ module.exports = {
         titleNav: "Comprobante agencia",
         template: "!!ejs-compiled-loader!./src/layout-agencia_form.ejs",
         title: "Oasis Hotels & Resorts | Check In Comprobante de Agencia",
-        // minify: false,
-        minify: {
-          collapseWhitespace: true,
-          keepClosingSlash: true,
-          removeComments: true,
-          removeRedundantAttributes: false, // do not remove type="text"
-          removeScriptTypeAttributes: true,
-          removeStyleLinkTypeAttributes: true,
-          useShortDoctype: true,
-        },
+        minify: false,
+        // minify: {
+        //   collapseWhitespace: true,
+        //   keepClosingSlash: true,
+        //   removeComments: true,
+        //   removeRedundantAttributes: false, // do not remove type="text"
+        //   removeScriptTypeAttributes: true,
+        //   removeStyleLinkTypeAttributes: true,
+        //   useShortDoctype: true,
+        // },
       },
       pasaporte: {
         options: {
@@ -68,16 +69,16 @@ module.exports = {
         template: "!!ejs-compiled-loader!./src/layout-agencia_form.ejs",
         title: "Oasis Hotels & Resorts | Check In By Agency",
         titleNav: "Escaneo de pasaporte",
-        // minify: false,
-        minify: {
-          collapseWhitespace: true,
-          keepClosingSlash: true,
-          removeComments: true,
-          removeRedundantAttributes: false, // do not remove type="text"
-          removeScriptTypeAttributes: true,
-          removeStyleLinkTypeAttributes: true,
-          useShortDoctype: true,
-        },
+        minify: false,
+        // minify: {
+        //   collapseWhitespace: true,
+        //   keepClosingSlash: true,
+        //   removeComments: true,
+        //   removeRedundantAttributes: false, // do not remove type="text"
+        //   removeScriptTypeAttributes: true,
+        //   removeStyleLinkTypeAttributes: true,
+        //   useShortDoctype: true,
+        // },
       },
       reserva: {
         entry: "index",
@@ -88,16 +89,16 @@ module.exports = {
         // template: "./src/res_number.ejs",
         template: "!!ejs-compiled-loader!./src/res_number.ejs",
         title: "Oasis Hotels & Resorts | Get Reservation Number",
-        // minify: false,
-        minify: {
-          collapseWhitespace: true,
-          keepClosingSlash: true,
-          removeComments: true,
-          removeRedundantAttributes: false, // do not remove type="text"
-          removeScriptTypeAttributes: true,
-          removeStyleLinkTypeAttributes: true,
-          useShortDoctype: true,
-        },
+        minify: false,
+        // minify: {
+        //   collapseWhitespace: true,
+        //   keepClosingSlash: true,
+        //   removeComments: true,
+        //   removeRedundantAttributes: false, // do not remove type="text"
+        //   removeScriptTypeAttributes: true,
+        //   removeStyleLinkTypeAttributes: true,
+        //   useShortDoctype: true,
+        // },
       },
       success: {
         options: {
@@ -108,24 +109,25 @@ module.exports = {
         template: "!!ejs-compiled-loader!./src/layout-success.ejs",
         entry: "index",
         titleNav: "",
-        // minify: false,
+        minify: false,
       },
-      unsuccessful: {
+      modals: {
         options: {
           test: "var",
         },
         titleNav: "",
-        title: "Oasis Hotels & Resorts | Unsuccess Page",
+        title: "Oasis Hotels & Resorts | Modals Page",
         entry: "index",
-        // template: "./src/layout-unsuccess.ejs",
-        template: "!!ejs-compiled-loader!./src/layout-unsuccess.ejs",
+        minify: false,
+        template: "!!ejs-compiled-loader!./src/layout-modals.ejs",
       },
     },
   },
   use: [
     // standard(),
     web({
-      publicPath: process.env.NODE_ENV == "production" ? "./" : "/",
+      publicPath: "./",
+      // publicPath: process.env.NODE_ENV == "production" ? "./" : "/",
       minify: {
         // Javascript minification occurs only in production by default.
         // To change uglify-es options or switch to another minifier, see below.

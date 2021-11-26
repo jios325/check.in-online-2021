@@ -31,17 +31,21 @@
 
         &__title
             font-size: 12px
-
+            +media(">=md")
+                font-size: 16px
             +media("<md")
                 margin-left: 10px
-
         .language
             cursor: pointer
             display: flex
 
             & li span.carret:before
-                content: ""
-                background-image: url("/src/images/arrows/arrow-down.png")
+                content: "\42"
+                font-family: $iconFont
+                font-size: 14px
+                font-size: 300
+                // line-height: 30px
+                // vertical-align: 
                 background-repeat: no-repeat
                 height: 10px
                 width: 15px
@@ -56,7 +60,7 @@
                         display: block
 
                     & span.carret:before
-                        background-image: url("/src/images/arrows/arrow-up.png")
+                        content: "\44"
 
             &--menu
                 display: none
